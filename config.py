@@ -5,4 +5,4 @@
 #
 # Change only the text inside the quotes, then save.
 
-PROJECT_FOLDER = "library_example"
+PROJECT_FOLDER = "my_project"

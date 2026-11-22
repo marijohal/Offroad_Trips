@@ -2,20 +2,20 @@
 # the guide (docs/04-write-your-sql.md). Change only the text inside the
 # quotes. projects/library_example/settings.py shows every one filled in.
 
-SITE_NAME = "My Capstone Project"            # the name at the top of every page
-TAGLINE = "One sentence about what this site keeps track of."
-ICON = "database"                            # any icon name from icons.getbootstrap.com
+SITE_NAME = "Offroad Trips"            # the name at the top of every page
+TAGLINE = "This site track Offroad trip located across the USA."
+ICON = "https://icons.getbootstrap.com/icons/truck-flatbed/"                            # any icon name from icons.getbootstrap.com
 
-YOUR_NAME = "Your Name"
+YOUR_NAME = "Maricruz Johal"
 COURSE = "CIS 4720"                          # or CIS 2020
-GITHUB_URL = ""                              # your repository address, once you have one
+GITHUB_URL = "https://github.com/marijohal/Offroad_Trips.git"                              # your repository address, once you have one
 
 # What one row on the Browse page is called, for example "recipe" and "recipes"
-ITEM = "item"
-ITEMS = "items"
+ITEM = "trip"
+ITEMS = "trips"
 
-BROWSE_TITLE = "All items"
-BROWSE_INTRO = "Every item, in order. Click one to see its details."
+BROWSE_TITLE = "All Trips"
+BROWSE_INTRO = "Every trip in descending date order. Click one to see its details."
 
 DETAIL_RELATED_TITLE = "Related rows"
 DETAIL_RELATED_EMPTY = "Nothing related to this one yet."
