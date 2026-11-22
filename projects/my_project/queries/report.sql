@@ -6,3 +6,16 @@
    The library version: projects/library_example/queries/report.sql
    Write your SQL below this comment. */
 
+--how many member signed up for each location
+-- || joins strings together
+select guide_name,  t."Average Trip Fee", 
+t."Number of Guided Trips" 
+from trail_guide g 
+JOIN (
+select guide_id,
+       '$' || round(avg(trip_fee),2) AS "Average Trip Fee",      
+       count(*) AS "Number of Guided Trips"
+from  offroad_trip
+GROUP BY guide_id
+) t ON g.guide_id = t.guide_id 
+order BY t."Number of Guided Trips" DESC, g.guide_name; 

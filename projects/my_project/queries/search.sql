@@ -10,3 +10,11 @@
    The library version: projects/library_example/queries/search.sql
    Write your SQL below this comment. */
 
+SELECT t.trip_id AS id,
+       t.location AS "Location",
+       g.guide_name AS "Guide Name"
+FROM offroad_trip t 
+JOIN trail_guide g on t.guide_id = g.guide_id
+WHERE t.location LIKE '%' || :term || '%'
+   OR g.guide_name LIKE '%' || :term || '%'
+ORDER BY t.location;

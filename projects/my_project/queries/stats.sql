@@ -8,3 +8,8 @@
    The library version: projects/library_example/queries/stats.sql
    Write your SQL below this comment. */
 
+-- The counts for the homepage
+   SELECT
+   (SELECT count(*) FROM offroad_trip) AS "Trips",
+   (SELECT count(*) FROM trail_guide) AS "Guides";
+

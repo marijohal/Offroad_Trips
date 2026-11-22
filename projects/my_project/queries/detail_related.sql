@@ -6,3 +6,12 @@
    The library version: projects/library_example/queries/detail_related.sql
    Write your SQL below this comment. */
 
+   SELECT m.member_name AS "Member",
+          s.signup_date AS "Signup Date",
+          CASE WHEN s.paid = 1 THEN 'Paid' ELSE 'Not Paid' END AS "Paid"
+   FROM signup s
+   JOIN member m ON m.member_id = s.member_id
+   WHERE s.trip_id = :id  
+   ORDER BY s.signup_date DESC;
+
+

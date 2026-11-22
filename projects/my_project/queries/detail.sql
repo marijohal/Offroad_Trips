@@ -7,3 +7,14 @@
    The library version: projects/library_example/queries/detail.sql
    Write your SQL below this comment. */
 
+SELECT t.trip_id           AS id,
+       t.location          AS "Location",
+       t.trip_date         AS "Trip Date",
+       t.trip_fee          AS "Trip Fee",
+       g.guide_name        AS "Guide",
+       g.guide_phone       AS "Guide Phone",
+       g.guide_years_exp   AS "Guide Years of Experience",
+       (SELECT COUNT(*) FROM signup s WHERE s.trip_id = t.trip_id) AS "Members Signed Up"
+FROM offroad_trip t
+JOIN trail_guide g ON g.guide_id = t.guide_id
+WHERE t.trip_id = :id;
