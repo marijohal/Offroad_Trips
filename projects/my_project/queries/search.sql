@@ -9,6 +9,7 @@
 
    The library version: projects/library_example/queries/search.sql
    Write your SQL below this comment. */
+-- Find trips whose location or guide name contains the search words.
 
 SELECT t.trip_id AS id,
        t.location AS "Location",

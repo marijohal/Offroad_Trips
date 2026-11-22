@@ -26,7 +26,7 @@
 PRAGMA foreign_keys = ON;
 -- Offroad Trips sample data (SQLite)
 
--- 8 trail guides; guides 7 and 8 lead no trips yet
+-- 10 trail guides; guides 7 through 10 lead no trips yet
 INSERT INTO trail_guide (guide_name, guide_phone, guide_years_exp) VALUES
     ('Rosa Delgado', '209-555-0101', 12),
     ('Hank Whitfield', '209-555-0102', 8),
@@ -35,7 +35,9 @@ INSERT INTO trail_guide (guide_name, guide_phone, guide_years_exp) VALUES
     ('Lena Okafor', '209-555-0105', 3),
     ('Dusty McAllister', '209-555-0106', 20),
     ('Sofia Ramirez', '209-555-0107', 7),
-    ('Ben Kowalczyk', '209-555-0108', 1);
+    ('Ben Kowalczyk', '209-555-0108', 1),
+    ('Tasha Redcloud', '209-555-0109', 10),
+    ('Owen Prescott', '209-555-0110', 4);
 
 -- 12 trips in 2026; trips 11 and 12 are still upcoming, trip 12 has no sign-ups yet
 INSERT INTO offroad_trip (location, trip_date, trip_fee, guide_id) VALUES

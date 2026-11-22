@@ -1,21 +1,26 @@
-# My Capstone Project
+# Offroad Trips
 
-> **Students:** fill in this top section in Part 4, Step 13 of the guide. Replace everything in this box.
+**Live site:** https://your-app-name.onrender.com <!-- TODO: replace with your Render URL after deploying -->
+**Built by:** Maricruz Johal, CIS 4720
+**Code:** https://github.com/marijohal/Offroad_Trips
 
-**Live site:** https://your-app-name.onrender.com
-**Built by:** Your Name, CIS 4720
-
-One or two sentences about what your site keeps track of and who would use it.
+Offroad Trips keeps track of guided off-road trips across the USA: where and when each trip runs, what it costs, which trail guide leads it, and which club members have signed up and paid. An off-road club organizer would use it to plan trips, assign guides, and see who is going.
 
 **Database design**
 
-![ER diagram](erd.png)
+![ER diagram](ERD.png)
 
 | Table | What one row is |
 |---|---|
-| table_one | ... |
-| table_two | ... |
-| table_three | ... |
+| trail_guide | One trail guide, with their phone number and years of experience |
+| offroad_trip | One scheduled trip: its location, date, fee, and the guide who leads it |
+| member | One club member, with their email and the date they joined |
+| signup | One member signed up for one trip, with the signup date and whether they paid |
+
+**Extras (CIS 4720)**
+
+- **View `trip_list`:** every trip joined with its guide's name, newest first. The Browse page reads from it.
+- **Trigger `check_trip_date`:** blocks adding a trip dated more than 2 years past the current year.
 
 ---
 
@@ -66,14 +71,14 @@ On a Mac, type `python3` instead of `python`.
 
 `python check.py` tests most of these for you.
 
-- [ ] A topic of your own, with `settings.py` filled in
-- [ ] At least 3 tables in third normal form, each with a primary key
-- [ ] At least 2 foreign keys linking the tables
-- [ ] At least 10 rows in every table
-- [ ] All seven query files written, and every page working
-- [ ] Search uses the `:term` placeholder (never text pasted into the SQL)
-- [ ] An ER diagram saved as `erd.png` and shown in this README
-- [ ] **CIS 4720:** at least one view and one trigger
-- [ ] Every SQL statement has a short comment above it, in your own words
-- [ ] The top of this README filled in
+- [x] A topic of your own, with `settings.py` filled in
+- [x] At least 3 tables in third normal form, each with a primary key
+- [x] At least 2 foreign keys linking the tables
+- [x] At least 10 rows in every table
+- [x] All seven query files written, and every page working
+- [x] Search uses the `:term` placeholder (never text pasted into the SQL)
+- [x] An ER diagram saved as `erd.png` and shown in this README
+- [x] **CIS 4720:** at least one view and one trigger
+- [x] Every SQL statement has a short comment above it, in your own words
+- [x] The top of this README filled in
 - [ ] Your work pushed to GitHub, deployed on Render, and added to your Capstone page

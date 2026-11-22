@@ -8,4 +8,8 @@
 
    The library version: projects/library_example/queries/add_author_options.sql
    Write your SQL below this comment. */
+-- List every guide (id and name) for the Guide dropdown on the Add form.
 
+SELECT guide_id, guide_name
+FROM  trail_guide
+ORDER BY guide_name;

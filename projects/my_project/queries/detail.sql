@@ -6,6 +6,7 @@
 
    The library version: projects/library_example/queries/detail.sql
    Write your SQL below this comment. */
+-- One trip's details, its guide's info, and how many members signed up.
 
 SELECT t.trip_id           AS id,
        t.location          AS "Location",

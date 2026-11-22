@@ -6,7 +6,7 @@
    The library version: projects/library_example/queries/report.sql
    Write your SQL below this comment. */
 
---how many member signed up for each location
+--Number of Trips a guided has been assigned to guide.
 -- || joins strings together
 select guide_name,  t."Average Trip Fee", 
 t."Number of Guided Trips" 

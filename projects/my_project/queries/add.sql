@@ -6,4 +6,7 @@
 
    The library version: projects/library_example/queries/add.sql
    Write your SQL below this comment. */
+-- Save a new trip from the Add form.
 
+INSERT INTO offroad_trip (location, guide_id, trip_date, trip_fee)
+VALUES (:location, :guide_id, :trip_date, :trip_fee);

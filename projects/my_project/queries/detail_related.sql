@@ -5,6 +5,7 @@
 
    The library version: projects/library_example/queries/detail_related.sql
    Write your SQL below this comment. */
+-- The members signed up for this trip, newest signup first, and whether they paid.
 
    SELECT m.member_name AS "Member",
           s.signup_date AS "Signup Date",

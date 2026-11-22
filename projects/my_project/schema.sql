@@ -59,3 +59,24 @@ CREATE TABLE signup(
   signup_date TEXT not null,
   UNIQUE (trip_id,member_id)
 );
+
+--Create a view of the list of trips that includes the guide for each trip.
+CREATE VIEW trip_list AS
+SELECT t.trip_id, t.location, g.guide_name, t.trip_date, t.trip_fee
+FROM offroad_trip t 
+JOIN trail_guide g ON g.guide_id = t.guide_id
+ORDER BY t.trip_date DESC;
+
+-- Create a trigger that checks if a trip date is greate than 2 years out.
+CREATE TRIGGER check_trip_date
+BEFORE INSERT ON offroad_trip
+WHEN CAST(strftime('%Y', NEW.trip_date) AS INTEGER)
+  > CAST(strftime('%Y', 'now') AS INTEGER) + 2
+BEGIN
+  SELECT RAISE(ABORT, 'Trip date cannot be more than 2 years past the current year');
+END;
+
+-- try insert
+-- "Black Bear Pass, CO", "Hank Witfield", "June 8, 2027", 298.00
+-- "Trans-America Trail (TAT)", "Rosa Delgado", "July 5, 2028", 445.00
+-- To trigger an error enter May 4, 2030
